@@ -14,7 +14,7 @@
   left: 50%;
   transform: translateX(-50%) skewX(-12deg);
   z-index: -1;
-  width: 110%;
+  width: 102%;
   height: 24%;
   background-color: #41d1ff;
   transition: 200ms ease;

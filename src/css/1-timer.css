@@ -1,0 +1,113 @@
+input {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  border: none;
+  width: 272px;
+  /* height: 40px; */
+  font-weight: 400;
+  padding: 7px 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  background: #fff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+button {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: none;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #cfcfcf;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #989898;
+}
+
+button:hover {
+  background: #4e75ff;
+  color: #fff;
+}
+
+.input-data-timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 36px;
+  margin-left: 156px;
+}
+
+.timer {
+  margin-top: 32px;
+  margin-left: 156px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+}
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+}
+.value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.label {
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  text-transform: uppercase;
+}
+
+/* Кастомний стиль для календаря */
+.flatpickr-calendar {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #4d5ae5;
+}
+
+.flatpickr-day:hover {
+  background-color: #e6f7ff;
+  color: #333;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.today {
+  background-color: #4d5ae5;
+  color: #fff;
+  border-radius: 4px;
+}
