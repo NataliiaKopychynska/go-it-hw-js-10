@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <link rel="stylesheet" crossorigin href="/go-it-hw-js-10/assets/styles-l2ISaFyz.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <script type="module" crossorigin src="/go-it-hw-js-10/2-snackbar.js"></script>
+    <link rel="modulepreload" crossorigin href="/go-it-hw-js-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/go-it-hw-js-10/assets/vendor-BbbuE1sJ.js">
+    <link rel="stylesheet" crossorigin href="/go-it-hw-js-10/assets/vendor-CZjNVMTf.css">
+    <link rel="stylesheet" crossorigin href="/go-it-hw-js-10/assets/styles-D3GgSowQ.css">
   </head>
   <body>
     <header class="header">
@@ -38,19 +50,31 @@
           <input type="number" name="delay" required />
         </label>
 
-        <fieldset>
+        <fieldset class="fiedest-radio">
           <legend>State</legend>
           <label>
-            <input type="radio" name="state" value="fulfilled" required />
+            <input
+              class="fulfilled-i"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
             Fulfilled
           </label>
           <label>
-            <input type="radio" name="state" value="rejected" required />
+            <input
+              class="rejected-i"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
             Rejected
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button class="btn-snackbar" type="submit">Create notification</button>
       </form>
     </main>
     <footer class="footer">
