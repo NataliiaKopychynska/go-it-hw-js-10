@@ -2,15 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/go-it-hw-js-10/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Vanilla App Template</title>
+    <title>Page 3</title>
     <link rel="stylesheet" crossorigin href="/go-it-hw-js-10/assets/styles-l2ISaFyz.css">
   </head>
   <body>
@@ -22,25 +16,43 @@
               <use href="{=$icon-path}"></use>
             </svg>
           </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="back-link" href="./index.html">Go back</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link-page {=$highlight-act}" href="./1-timer.html"
+                >1-timer</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
 
     <main>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./1-timer.html"
-            >1-timer</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html"
-            >2-snackbar</a
-          >
-        </li>
-      </ul>
-    </main>
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
 
+        <fieldset>
+          <legend>State</legend>
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+      </form>
+    </main>
     <footer class="footer">
       <div class="container">
         <p class="footer-desc">

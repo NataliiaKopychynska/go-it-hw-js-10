@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Page 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+
+    <link rel="stylesheet" crossorigin href="/go-it-hw-js-10/assets/styles-l2ISaFyz.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav-logo" href="./index.html" aria-label="Site logo">
+            <svg class="nav-logo-icon" width="100" height="30">
+              <use href="/go-it-hw-js-10/assets/logo-CWKflIk4.svg"></use>
+            </svg>
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="back-link" href="./index.html">Go back</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link-page {=$highlight-curr}"
+                href="./2-snackbar.html"
+                >2-snackbar</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="input-data-timer">
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start disabled>Start</button>
+      </div>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-desc">
+          ✨ Made by
+          <a
+            class="footer-link"
+            href="https://www.linkedin.com/in/nataliia-kopychynska-72992b266/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nataliia Kopychynska
+          </a>
+          ✨
+        </p>
+      </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script> -->
+
+    <script src="./js/1-timer.js"></script>
+  </body>
+</html>
