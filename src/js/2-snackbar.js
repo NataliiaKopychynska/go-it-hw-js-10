@@ -34,7 +34,6 @@ function handlCriateMassenge(evt) {
     return setTimeout(
       () =>
         iziToast.success({
-          // class: 'eror-modal',
           timeout: 10000,
           position: 'topRight',
 
@@ -48,7 +47,7 @@ function handlCriateMassenge(evt) {
           messageSize: '16px',
           messageLineHeight: '1.5',
           backgroundColor: '#59a10d',
-          theme: 'light', // dark
+          theme: 'light',
           iconColor: '#fff',
         }),
       delay
@@ -57,7 +56,6 @@ function handlCriateMassenge(evt) {
     return setTimeout(
       () =>
         iziToast.error({
-          // class: 'eror-modal',
           timeout: 10000,
           position: 'topRight',
 
@@ -71,7 +69,7 @@ function handlCriateMassenge(evt) {
           messageSize: '16px',
           messageLineHeight: '1.5',
           backgroundColor: '#ef4040',
-          theme: 'light', // dark
+          theme: 'light',
           iconColor: '#fff',
         }),
       delay
@@ -80,7 +78,6 @@ function handlCriateMassenge(evt) {
     return setTimeout(
       () =>
         iziToast.warning({
-          // class: 'eror-modal',
           timeout: 10000,
           position: 'topRight',
 
@@ -94,7 +91,7 @@ function handlCriateMassenge(evt) {
           messageSize: '16px',
           messageLineHeight: '1.5',
           backgroundColor: ' #ffa000',
-          theme: 'light', // dark
+          theme: 'light',
           iconColor: '#fff',
         }),
       delay
