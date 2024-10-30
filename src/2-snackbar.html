@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -38,19 +46,31 @@
           <input type="number" name="delay" required />
         </label>
 
-        <fieldset>
+        <fieldset class="fiedest-radio">
           <legend>State</legend>
           <label>
-            <input type="radio" name="state" value="fulfilled" required />
+            <input
+              class="fulfilled-i"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
             Fulfilled
           </label>
           <label>
-            <input type="radio" name="state" value="rejected" required />
+            <input
+              class="rejected-i"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
             Rejected
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button class="btn-snackbar" type="submit">Create notification</button>
       </form>
     </main>
     <footer class="footer">
@@ -69,5 +89,6 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>

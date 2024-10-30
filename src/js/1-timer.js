@@ -6,6 +6,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
+import '../css/1-timer.css';
 
 const startButton = document.querySelector('button[data-start]');
 const dateTimePicker = document.getElementById('datetime-picker');
@@ -14,6 +15,7 @@ const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
 
+startButton.disabled = true;
 let userSelectedDate = null;
 let countdownInterval;
 
@@ -23,16 +25,32 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
+    if (!selectedDates || !selectedDates[0]) return;
     const selectedDate = selectedDates[0];
+    console.log(selectedDate);
 
-    if (selectedDate <= new Date()) {
-      iziToast.warning({
-        title: 'Warning',
+    if (selectedDate < new Date()) {
+      iziToast.error({
+        // class: 'eror-modal',
+        timeout: 10000,
+        position: 'topRight',
+
+        class: 'eror-modal',
+        title: 'Error',
+        titleColor: '#fff',
+        titleSize: '16px',
+        titleLineHeight: '1.5',
         message: 'Please choose a date in the future',
+        messageColor: '#fff',
+        messageSize: '16px',
+        messageLineHeight: '1.5',
+        backgroundColor: '#ef4040',
+        theme: 'light', // dark
+        iconColor: '#fff',
       });
       startButton.disabled = true;
     } else {
-      userSelectedDate = selectedDate;
+      userSelectedDate = selectedDates[0];
       startButton.disabled = false;
     }
   },
