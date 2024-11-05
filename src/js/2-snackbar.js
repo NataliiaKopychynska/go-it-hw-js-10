@@ -1,14 +1,14 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+const form = document.querySelector('.notification-form'); // Заміна кнопки на форму
 const enterDelay = document.querySelector('input[name="delay"]');
-const btnCreateNotification = document.querySelector('.btn-snackbar');
 const fiedestOptions = document.querySelector('.fiedest-radio');
 
 let fulfilledBtn = false;
 let rejectedBtn = false;
 
-btnCreateNotification.addEventListener('click', handleCreateMessage);
+form.addEventListener('submit', handleCreateMessage); // Зміна обробника події з кнопки на форму
 fiedestOptions.addEventListener('change', changeOptions);
 
 function changeOptions(event) {
@@ -26,44 +26,68 @@ function handleCreateMessage(evt) {
 
   const delay = parseInt(enterDelay.value) || 0;
 
-  // Створення промісу з виконанням або відхиленням залежно від обраного значення
+  // Створення промісу
   const notificationPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (fulfilledBtn) {
-        resolve(`Fulfilled promise in ${delay} ms`);
+        resolve(delay); // Відправляємо саме значення затримки
       } else if (rejectedBtn) {
-        reject(new Error('Rejected promise due to invalid operation'));
+        reject(delay); // Відправляємо значення затримки при відхиленні
       }
     }, delay);
   });
 
-  // Обробка успішного виконання або відхилення промісу
+  // Обробка промісу
   notificationPromise
-    .then(message => {
+    .then(delay => {
       iziToast.success({
         timeout: 5000,
         position: 'topRight',
         title: 'Success',
         titleColor: '#fff',
         titleSize: '16px',
-        message: message,
+        message: `Fulfilled promise in ${delay} ms`,
         messageColor: '#fff',
         backgroundColor: '#59a10d',
       });
     })
-    .catch(error => {
+    .catch(delay => {
       iziToast.error({
         timeout: 5000,
         position: 'topRight',
         title: 'Error',
         titleColor: '#fff',
         titleSize: '16px',
-        message: error.message,
+        message: `Rejected promise in ${delay} ms`,
         messageColor: '#fff',
         backgroundColor: '#ef4040',
       });
     })
     .finally(() => {
-      enterDelay.value = ''; // Очищення поля введення після виконання або відхилення
+      enterDelay.value = ''; // Очищення поля введення
     });
 }
+
+// Додатковий запит POST
+const postToAdd = {
+  title: 'CRUD',
+  body: 'CRUD is awesome!',
+};
+
+const options = {
+  method: 'POST',
+  body: JSON.stringify(postToAdd),
+  headers: {
+    'Content-Type': 'application/json; charset=UTF-8',
+  },
+};
+
+fetch('https://jsonplaceholder.typicode.com/posts', options)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  })
+  .then(post => console.log(post))
+  .catch(error => console.log(error));
